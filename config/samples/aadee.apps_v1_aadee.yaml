@@ -1,0 +1,12 @@
+apiVersion: aadee.apps.obaydullahmhs/v1
+kind: Aadee
+metadata:
+  labels:
+    app.kubernetes.io/name: aadee
+    app.kubernetes.io/instance: aadee-sample
+    app.kubernetes.io/part-of: kubebuilder-crd
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: kubebuilder-crd
+  name: aadee-sample
+spec:
+  # TODO(user): Add fields here

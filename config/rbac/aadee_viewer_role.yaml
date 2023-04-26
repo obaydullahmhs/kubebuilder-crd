@@ -1,0 +1,27 @@
+# permissions for end users to view aadees.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: aadee-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: kubebuilder-crd
+    app.kubernetes.io/part-of: kubebuilder-crd
+    app.kubernetes.io/managed-by: kustomize
+  name: aadee-viewer-role
+rules:
+- apiGroups:
+  - aadee.apps.obaydullahmhs
+  resources:
+  - aadees
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - aadee.apps.obaydullahmhs
+  resources:
+  - aadees/status
+  verbs:
+  - get

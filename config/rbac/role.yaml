@@ -1,0 +1,33 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - aadee.apps.obaydullahmhs
+  resources:
+  - aadees
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - aadee.apps.obaydullahmhs
+  resources:
+  - aadees/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - aadee.apps.obaydullahmhs
+  resources:
+  - aadees/status
+  verbs:
+  - get
+  - patch
+  - update
