@@ -63,8 +63,14 @@ spec:
                   serviceNodePort:
                     format: int32
                     type: integer
+                  servicePort:
+                    format: int32
+                    type: integer
                   serviceType:
                     type: string
+                required:
+                - servicePort
+                - serviceType
                 type: object
             required:
             - container

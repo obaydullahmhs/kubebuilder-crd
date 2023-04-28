@@ -30,9 +30,10 @@ type ContainerSpec struct {
 type ServiceSpec struct {
 	//+optional
 	ServiceName string `json:"serviceName,omitempty"`
-	ServiceType string `json:"serviceType,omitempty"`
+	ServiceType string `json:"serviceType"`
 	//+optional
 	ServiceNodePort int32 `json:"serviceNodePort,omitempty"`
+	ServicePort     int32 `json:"servicePort"`
 }
 
 // AadeeSpec defines the desired state of Aadee
@@ -55,8 +56,7 @@ type AadeeSpec struct {
 type AadeeStatus struct {
 	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
-	//+optional
-	AvailableReplicas *int32 `json:"availableReplicas,omitempty"`
+	AvailableReplicas int32 `json:"availableReplicas,omitempty"`
 }
 
 //+kubebuilder:object:root=true

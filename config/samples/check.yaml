@@ -7,10 +7,10 @@ metadata:
     app.kubernetes.io/part-of: kubebuilder-crd
     app.kubernetes.io/managed-by: kustomize
     app.kubernetes.io/created-by: kubebuilder-crd
-  name: aadee-sample
+  name: aadee-sample-2
 spec:
   deploymentName: my-deployment
-  replicas: 3
+  replicas: 1
   container:
     image: "obaydullahmhs/api-server"
     port: 8080
