@@ -115,7 +115,7 @@ func (r *AadeeReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctrl
 			return ctrl.Result{}, err
 		}
 	} else {
-		if aadee.Spec.Replicas != nil && *aadee.Spec.Replicas != *aadee.Spec.Replicas {
+		if aadee.Spec.Replicas != nil && *aadee.Spec.Replicas != *deploymentObject.Spec.Replicas {
 
 			fmt.Println(*aadee.Spec.Replicas, *deploymentObject.Spec.Replicas)
 			fmt.Println("Deployment replica don't match.....updating")
